@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Mind Match</title>
+    
+    <link rel="stylesheet" href="game2.css" />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+  </head>
+  <body>
+    <!-- medium BG music/ Mute and Unmute Button -->
+    <div id="mutebut">
+      <button type="button" id="soundbutton">Mute 🔇</button>
+    </div>
+    <audio id="sound" autoplay="autoplay" loop="loop">
+      <source src="/sound/homebgmusic.mp3" type="audio/wav">
+    </audio>
+
+    <!-- Game Page Moving character -->
+    <div class="character">
+      <img src="../content/images/character1.png" />
+    </div>
+    <!-- Game Page Heading -->
+    <div class="container">
+      <div class="upper-layer"><span>START THE GAME</span></div>
+      <div class="game-info">
+        <div class="name">HELLO: <span></span></div>
+        <div class="timer">
+          <span id="minute"></span>:<span id="second">00</span>
+        </div>
+        <div class="score">WRONG TRIES:<span></span></div>
+      </div>
+      <!--CONTENT OF THE GAME--> <!--16 Cards, 8 Pairs-->
+      <!-- Icon Card  -->
+      <div class="cards"> 
+        <div class="box" data-icon="cpu">
+          <img src="./images/game/cpu_game.png"/>
+          <div class="face front"><i class="fas fa-cpu"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Name Card -->
+        <div class="box" data-icon="cpu">
+          <img src="./images/game/cpu_name.png"/>
+          <div class="face front"><i class="fas fa-cpu"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Icon Card  -->
+        <div class="box" data-icon="keyboard">
+          <img src="./images/game/keyboard_game.png"/>
+          <div class="face front"><i class="fas fa-keyboard"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Name Card -->
+        <div class="box" data-icon="keyboard">
+          <img src="./images/game/keyboard_name.png"/>
+          <div class="face front"><i class="fas fa-keyboard"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Icon Card  -->
+        <div class="box" data-icon="monitor">
+          <img src="./images/game/monitor_game.png"/>
+          <div class="face front"><i class="fas fa-monitor"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Name Card -->
+        <div class="box" data-icon="monitor">
+          <img src="./images/game/monitor_name.png"/>
+          <div class="face front"><i class="fas fa-monitor"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Icon Card  -->
+        <div class="box" data-icon="motherboard">
+          <img src="./images/game/motherboard_game.png"/>
+          <div class="face front"><i class="fas fa-motherboard"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Name Card -->
+        <div class="box" data-icon="motherboard">
+          <img src="./images/game/motherboard_name.png"/>
+          <div class="face front"><i class="fas fa-motherboard"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Icon Card  -->
+        <div class="box" data-icon="twitter">
+          <img src="./images/game/twitter_game.png"/>
+          <div class="face front"><i class="fas fa-twitter"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Name Card -->
+        <div class="box" data-icon="twitter">
+          <img src="./images/game/twitter_name.png"/>
+          <div class="face front"><i class="fas fa-twitter"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Icon Card  -->
+        <div class="box" data-icon="youtube">
+          <img src="./images/game/youtube_game.png"/>
+          <div class="face front"><i class="fas fa-youtube"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Name Card -->
+        <div class="box" data-icon="youtube">
+          <img src="./images/game/youtube_name.png"/>
+          <div class="face front"><i class="fas fa-youtube"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Icon Card  -->
+        <div class="box" data-icon="facebook">
+          <img src="./images/game/facebook_game.png"/>
+          <div class="face front"><i class="fas fa-facebook"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Name Card -->
+        <div class="box" data-icon="facebook">
+          <img src="./images/game/facebook_name.png"/>
+          <div class="face front"><i class="fas fa-facebook"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Icon Card  -->
+        <div class="box" data-icon="spotify">
+          <img src="./images/game/spotify_game.png"/>
+          <div class="face front"><i class="fas fa-spotify"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Name Card -->
+        <div class="box" data-icon="spotify">
+          <img src="./images/game/spotify_name.png">
+          <div class="face front"><i class="fas fa-spotify"></i></div>
+          <div class="face back">
+            <img src="./images/game/logo.png"/>
+          </div>
+        </div>
+        <!-- Icon Card  -->
+        <div class="box" data-icon="mouse">
+            <img src="./images/game/mouse_game.png"/>
+            <div class="face front"><i class="fas fa-mouse"></i></div>
+            <div class="face back">
+              <img src="./images/game/logo.png"/>
+            </div>
+          </div>
+          <!-- Name Card -->
+          <div class="box" data-icon="mouse">
+            <img src="./images/game/mouse_name.png"/>
+            <div class="face front"><i class="fas fa-mouse"></i></div>
+            <div class="face back">
+              <img src="./images/game/logo.png"/>
+            </div>
+          </div>
+          <!-- Icon Card  -->
+          <div class="box" data-icon="ssd">
+            <img src="./images/game/ssd_game.png"/>
+            <div class="face front"><i class="fas fa-ssd"></i></div>
+            <div class="face back">
+              <img src="./images/game/logo.png"/>
+            </div>
+          </div>
+          <!-- Name Card -->
+          <div class="box" data-icon="ssd">
+            <img src="./images/game/ssd_name.png"/>
+            <div class="face front"><i class="fas fa-ssd"></i></div>
+            <div class="face back">
+              <img src="./images/game/logo.png"/>
+            </div>
+          </div>
+          <!-- Icon Card  -->
+          <div class="box" data-icon="tumblr">
+            <img src="./images/game/tumblr_game.png"/>
+            <div class="face front"><i class="fas fa-tumblr"></i></div>
+            <div class="face back">
+              <img src="./images/game/logo.png"/>
+            </div>
+          </div>
+          <!-- Name Card -->
+          <div class="box" data-icon="tumblr">
+            <img src="./images/game/tumblr_name.png"/>
+            <div class="face front"><i class="fas fa-tumblr"></i></div>
+            <div class="face back">
+              <img src="./images/game/logo.png"/>
+            </div>
+          </div>
+          <!-- Icon Card  -->
+          <div class="box" data-icon="telegram">
+            <img src="./images/game/telegram_game.png"/>
+            <div class="face front"><i class="fas fa-telegram"></i></div>
+            <div class="face back">
+              <img src="./images/game/logo.png"/>
+            </div>
+          </div>
+          <!-- Name Card -->
+          <div class="box" data-icon="telegram">
+            <img src="./images/game/telegram_name.png">
+            <div class="face front"><i class="fas fa-telegram"></i></div>
+            <div class="face back">
+              <img src="./images/game/logo.png"/>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <script text="text/javascript">
+      const sound = document.getElementById('sound');
+  
+      document.getElementById("soundbutton").addEventListener("click", function() {
+        this.textContent = this.textContent === "Mute 🔇" ? "Unmute 🔈" : "Mute 🔇"; 
+        sound.muted = !sound.muted;
+      })
+    </script>
+    
+    <!-- Script for Javascript -->
+    <script defer src="game2.js"></script>
+  </body>
+</html>

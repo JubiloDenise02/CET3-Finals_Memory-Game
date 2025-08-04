@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mind Match</title>
+
+  <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="storyline.css">
+  
+  <script defer src="storyline.js"></script>
+</head>
+<body>
+  <!-- Storyline 1st Page -->
+  <div class="part1">
+    <h4>Today's Mission</h4>
+    <div class="content"> 
+      <div class="storyline1">
+        <p class="text">Welcome hero, you have a special
+          <br>mission today. You need to help a student to review
+          <br>for his exam about hardware and application software components</p>
+      </div>
+      <div class="buttons">
+        <!-- Link to Next Page -->
+        <button onclick="hidePart1()">Next</button>
+        <!-- Link to Review Page -->
+        <button onclick="window.location.assign('review1.html')">Skip</button>
+      </div>
+    </div>
+  </div>
+  <!-- Storyline 2nd Page -->
+  <div class="part2">
+    <h4>Today's Mission  </h4>
+    <div class="content"> 
+      <div class="storyline2">
+        <p class="text">He needs a little help in identifying the object
+          <br>based on its appearance. In order to do that, you
+          <br>need to play a memory game, but it's not that simple.
+        </p>
+      </div>
+      <div class="buttons">
+        <!-- Link to Next Page -->
+        <button onclick="showPart3()">Next</button>
+        <!-- Link to Review Page -->
+        <button onclick="window.location.assign('review1.html')">Skip</button>
+      </div>
+    </div>
+  </div>
+<!-- Storyline 3rd Page -->
+  <div class="part3">
+    <h4>Today's Mission  </h4>
+    <div class="content"> 
+      <div class="storyline3">
+        <p class='text'>Instead of matching two pictures, you'll 
+          <br>be matching a card with the picture to a card
+          <br>that contains its corresponding name. <!-- <br> <br> -->
+          </p>
+      </div>
+      <div class="buttons">
+        <!-- Link to Next Page -->
+        <button onclick="showPart4()">Next</button>
+        <!-- Link to Review Page -->
+        <button onclick="window.location.assign('review1.html')">Skip</button>
+      </div>
+    </div>
+  </div>
+<!-- Storyline 4th Page -->
+  <div class="part4">
+    <h4>Today's Mission  </h4>
+    <div class="content"> 
+      <div class="storyline2">
+        <p class="text">You have the option to select the game's
+          <br>level of difficulty. As soon as you've
+          <br>made a decision, pay close attention.
+        </p>
+      </div>
+      <div class="buttons">
+        <!-- Link to Next Page -->
+        <button onclick="showPart5()">Next</button>
+        <!-- Link to Review Page -->
+        <button onclick="window.location.assign('review1.html')">Skip</button>
+      </div>
+    </div>
+  </div>
+<!-- Storyline 5th Page -->
+  <div class="part5">
+    <h4>Today's Mission  </h4>
+    <div class="content"> 
+      <div class="storyline2">
+        <p class="text">Because the list of components, together with their
+          <br>corresponding names and meanings, will flash on the screen
+          <br>for 60 seconds to help you get familiarized with it.
+        </p>
+      </div>
+      <div class="buttons">
+        <!-- Link to Next Page -->
+        <button onclick="showPart6()">Next</button>
+        <!-- Link to Review Page -->
+        <button onclick="window.location.assign('review1.html')">Skip</button>
+      </div>
+    </div>
+  </div>
+<!-- Storyline 6th Page -->
+  <div class="part6">
+    <h4>Today's Mission  </h4>
+    <div class="content"> 
+      <div class="storyline2">
+        <p class="text">Keep in mind that the time you'll take will also
+          <br>be monitored so complete it as fast as you can.
+          <br>Are you ready?
+        </p>
+      </div>
+      <div class="buttons">
+        <!-- Link to Review Page -->
+        <button onclick="window.location.assign('review1.html')">Yes</button> 
+        <!-- Link to Home Page -->
+        <button onclick="window.location.assign('../index.html')">No</button> 
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mind Match</title>
+
+  <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="cards.css">
+</head>
+<body>
+  <!-- level BG music/ Mute and Unmute Button -->
+  <div id="mutebut">
+    <button type="button" id="soundbutton">Mute 🔇</button>
+  </div>
+  <audio id="sound" autoplay="autoplay" loop="loop">
+    <source src="/sound/gamebgmusic.mp3" type="audio/wav">
+  </audio>
+  <!-- 1st Card -->
+  <!-- Flip Card Start -->
+  <div class="flip-card">
+    <div class="flip-card-front">
+      <div class="inner">
+        <!-- Flip Card Front Icon -->
+        <img src="images/levelicon.png" class="icon" />
+        <h3>EASY</h3>
+      </div>
+    </div>
+    <!-- Flip Card End -->
+    <div class="flip-card-back">
+      <div class="inner">
+        <!-- Flip Card Back Icon -->
+        <img src="images/levelicon.png" class="icon" />
+        <h3>ARE YOU READY TO PLAY?</h3>
+        <div class="container">
+          <!-- Link to Easy Page Game-->
+          <a href="game1.html" class="btn"> GO! </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 2nd Card -->
+  <!-- Flip Card Start -->
+  <div class="flip-card">
+    <div class="flip-card-front">
+      <div class="inner">
+        <!-- Flip Card Front Icon -->
+        <img src="images/levelicon.png" class="icon" />
+        <h3>MEDUIM</h3>
+      </div>
+    </div>
+    <!-- Flip Card End -->
+    <div class="flip-card-back">
+      <div class="inner">
+        <!-- Flip Card Back Icon -->
+        <img src="images/levelicon.png" class="icon" />
+        <h3>ARE YOU READY TO PLAY?</h3>
+        <div class="container">
+          <!-- Link to Medium Page Game-->
+          <a href="game2.html" class="btn"> GO! </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 3rd Card-->
+  <!-- Flip Card Start -->
+  <div class="flip-card">
+    <div class="flip-card-front">
+      <div class="inner">
+        <!-- Flip Card Front Icon -->
+        <img src="images/levelicon.png" class="icon" />
+        <h3>HARD</h3>
+      </div>
+    </div>
+    <!-- Flip Card End -->
+    <div class="flip-card-back">
+      <div class="inner">
+        <!-- Flip Card Back Icon -->
+        <img src="images/levelicon.png" class="icon" />
+        <h3>ARE YOU READY TO PLAY?</h3>
+        <div class="container">
+          <!-- Link to Hard Page Game-->
+          <a href="game3.html" class="btn"> GO! </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script text="text/javascript">
+    const sound = document.getElementById('sound');
+
+    document.getElementById("soundbutton").addEventListener("click", function() {
+      this.textContent = this.textContent === "Mute 🔇" ? "Unmute 🔈" : "Mute 🔇"; 
+      sound.muted = !sound.muted;
+    })
+  </script>
+</body>
+</html>

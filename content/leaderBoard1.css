@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=VT323&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "VT323", monospace;
+  margin: 0;
+  background-image: url('../content/images/leaderboardbg.gif');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+  background-size: cover;
+}
+
+.heading {
+  text-align: center;
+  color: white;
+  height: 100px;
+  font-size: 100px;
+  line-height: 100px;
+  background-color: #222;
+  opacity: 0.8;
+  letter-spacing: 5px;
+
+}
+
+
+table {
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  opacity: 0.5;
+  padding: 25px;
+
+}
+
+table th {
+  color: white;
+  background-color: #222;
+  letter-spacing: 3px;
+  font-size: 40px;
+}
+
+table tr:nth-child(even) {
+  background-color: green;
+  font-size: 30px;
+}
+
+table tr:nth-child(odd) {
+  background-color: green;
+  font-size: 30px;
+}
+
+table .name {
+  text-align: center;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+.play {
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  background-color: #7f5185;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-left: 38%;
+  margin-bottom: 10px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.home {
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  background-color: #7f5185;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-bottom: 10px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+a:hover {
+  background-color: black;
+  color: white;
+}
+

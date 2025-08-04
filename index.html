@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mind Match</title>
+  
+  <link rel="shortcut icon" href="content/images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Home BG music/ Mute and Unmute Button -->
+  <div id="mutebut">
+    <button type="button" id="soundbutton">Mute 🔇</button>
+  </div>
+  <audio id="sound" autoplay="autoplay" loop="loop">
+    <source src="sound/homebgmusic.mp3" type="audio/wav">
+  </audio>
+  <!-- Home Page Title -->
+  <h1>
+    <span>M</span>
+    <span>I</span>
+    <span>N</span>
+    <span>D</span>
+    <span>M</span>
+    <span>A</span>
+    <span>T</span>
+    <span>C</span>
+    <span>H</span>
+  </h1>
+  <!-- Home Page Next Button -->
+  <div class="container">
+    <!-- Link to 3 Cards Page (Storyline, Leaderboard, Home) -->
+    <a href="content/cards.html" class="btn"> NEXT </a>
+  </div>
+  <!-- Home Page Moving character -->
+  <div class="character">
+    <img src="content/images/character1.png" />
+  </div>
+
+  <script text="text/javascript">
+    const sound = document.getElementById('sound');
+
+    document.getElementById("soundbutton").addEventListener("click", function() {
+      this.textContent = this.textContent === "Mute 🔇" ? "Unmute 🔈" : "Mute 🔇";
+      sound.muted = !sound.muted;
+    })
+  </script>
+</body>
+</html>

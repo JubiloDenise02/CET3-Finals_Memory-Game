@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=VT323&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "VT323",monospace;
+  margin: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../content/images/mainbg.gif');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+  background-size: cover;
+}
+
+/*1st page*/
+.upper-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
+  background-image: url('../content/images/mainbg.gif');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+  background-size: cover;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upper-layer span {
+  font-size: 50px;
+  cursor: pointer;
+  background-color: #7f5185;
+  color: black;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+.upper-layer span:hover {
+  background-color: black;
+  color: white;
+}
+
+/*Character*/
+.character{
+	position: absolute;
+ }
+
+.character{
+	left: 3%;
+  top: 65%;
+  bottom: 10%;
+	animation-name: chareffect;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+
+}
+
+ @keyframes chareffect{
+    0%{
+       top: 25%;
+    }
+
+    50%{
+       top: 65% ;
+    }
+
+    100%{
+       top: 25%;
+    }
+}
+
+/*2nd Page Title*/
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  height: 65px;
+  width: 900px;
+  max-width: 100%;
+  background-color: #7f5185;
+  color: white;
+  font-size: 27px;
+  align-items: center;
+  border: 5px solid black;
+  border-radius: 9px;
+  margin: 15px auto;
+  margin-top: 0;
+}
+
+.game-info .score span {
+  font-size: 30px;
+  color: #facc2d;
+}
+.game-info .name span {
+  font-size: 30px;
+  color: #facc2d;
+}
+.game-info .timer {
+  font-size: 30px;
+}
+
+/*2nd Page Card*/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 18vh);
+  width: 900px;
+  max-width: 100%;
+  justify-content: center;
+  margin: 0px auto;
+  gap: 20px;
+  font-size: 50px;
+}
+
+/*Cards Design*/
+.cards .box {
+  cursor: pointer;
+  border: 5px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #f4f4f4;
+  transform-style: preserve-3d;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+}
+
+.cards .box .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards .box .back {
+  backface-visibility: hidden;
+  transform: rotatex(180deg);
+  z-index: 10;
+  background-color:  wheat;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: rotatex(180deg);
+  -moz-transform: rotatex(180deg);
+  -ms-transform: rotatex(180deg);
+  -o-transform: rotatex(180deg);
+}
+
+.cards .box .front {
+  z-index: -3;
+  background-color: #7f5185;
+}
+
+.cards .box.is-flipped,
+.cards .box.is-matched {
+  transform: rotateX(0deg);
+  pointer-events: none;
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+}
+
+.cards.unclickable {
+  pointer-events: none;
+}
+
+/*End Game Button*/
+.game-end {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.game-end::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: url('../content/images/mainbg.gif');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+  background-size: cover;
+}
+
+.game-end div {
+  z-index: 3;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-image: url('../content/images/endgamebg.png');
+  width: 500px;
+  height: 340px;
+  border-radius: 8px;
+  font-size: 30px;
+  color: black;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.game-end div h2 {
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.game-end div p {
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-align: center;
+}
+
+.game-end div span {
+  font-size: 2rem;
+  background-color: #002243;
+  color: white;
+  border-radius: 15%;
+  padding: 7px;
+}
+
+.game-end div a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  margin-left: 85px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #002243;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.game-end div a:hover {
+  background-color: black;
+  color: white;
+}
+.danger {
+  color: red;
+  animation: danger 1s infinite cubic-bezier(0.14, 0.04, 0, 1.04);
+  -webkit-animation: danger 1s infinite cubic-bezier(0.14, 0.04, 0, 1.04);
+}
+
+@keyframes danger {
+  0% {
+    font-size: 24;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+
+button{
+  margin: 5px;
+  color: whitesmoke;
+  font-size: 20px;
+  background: rgb(127, 81, 133);
+}
